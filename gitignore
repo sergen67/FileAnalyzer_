@@ -1,0 +1,31 @@
+# Build çýktýlarý
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Loglar
+Logs/
+logs/
+*.log
+app-*.txt
+
+# NuGet
+packages/
+*.nupkg
+# PackageReference kullanýyorsan 'packages/' klasörü olmaz; sorun deðil
+
+# Test / temp
+TestResults/
+*.cache
+*.tmp
+
+# Rider/Resharper/VS Code vs
+.idea/
+*.DotSettings.user
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store
