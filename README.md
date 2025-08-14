@@ -12,5 +12,5 @@ Konsol uygulaması: dosya seç -> içerik oku -> kelime & noktalama analizi -> s
 - NuGet: `Serilog`, `Serilog.Extensions.Logging`, `Serilog.Sinks.File`, `UglyToad.PdfPig`, `Xceed.Words.NET`
 
 ## Çalıştırma
-Uygulamayı başlat → tür seç (`1=TXT, 2=DOCX, 3=PDF`) → dosya seç → sonuçlar konsolda.
+Uygulamayı başlat -> tür seç (`1=TXT, 2=DOCX, 3=PDF`) -> dosya seç -> sonuçlar konsolda.
 
