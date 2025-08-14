@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using FileAnalyzer_.Models;
+
 
 namespace FileAnalyzer_.Reader
 {
@@ -45,26 +47,6 @@ namespace FileAnalyzer_.Reader
                 topWords: freqList,
                 punctuationCounts: punctuationCounts
             );
-        }
-    }
-
-    public class WordCount
-    {
-        public string Word { get; }
-        public int Count { get; }
-        public WordCount(string word, int count) { Word = word; Count = count; }
-    }
-
-    public class AnalysisResult
-    {
-        public int DistinctWordCount { get; }
-        public List<WordCount> TopWords { get; }
-        public Dictionary<string, int> PunctuationCounts { get; }
-        public AnalysisResult(int distinctWordCount, List<WordCount> topWords, Dictionary<string, int> punctuationCounts)
-        {
-            DistinctWordCount = distinctWordCount;
-            TopWords = topWords ?? new List<WordCount>();
-            PunctuationCounts = punctuationCounts ?? new Dictionary<string, int>();
         }
     }
 }
