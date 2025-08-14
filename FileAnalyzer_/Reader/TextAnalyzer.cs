@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace FileAnalyzer_.Reader 
+namespace FileAnalyzer_.Reader
 {
-    //Dosyaları analiz eden sınıf
     public static class TextAnalyzer
     {
         static readonly HashSet<string> StopWords = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
@@ -18,7 +17,6 @@ namespace FileAnalyzer_.Reader
         {
             if (text == null) text = string.Empty;
 
-            // Noktalama
             var punctuationCounts = new Dictionary<string, int>();
             foreach (Match m in Regex.Matches(text, @"[.,!?\-;:()""'…]"))
             {
@@ -27,7 +25,7 @@ namespace FileAnalyzer_.Reader
                 else punctuationCounts[key] = 1;
             }
 
-            
+
             var words = new List<string>();
             foreach (Match m in Regex.Matches(text.ToLowerInvariant(), @"\b[^\W\d_]+\b"))
             {

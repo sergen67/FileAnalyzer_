@@ -8,7 +8,6 @@ using Xceed.Words.NET;
 
 namespace FileAnalyzer_.Reader
 {
-    // DOCX dosyalarını okuyan sınıf
     public class DocxFileReader: IFileReader
     {
         private readonly ILogger<DocxFileReader> _logger;

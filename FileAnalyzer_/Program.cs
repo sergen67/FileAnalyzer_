@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 using Microsoft.Extensions.Logging;
 using Serilog;
-using Serilog.Extensions.Logging;          
-using FileAnalyzer_.Reader;               
-using ILogger = Microsoft.Extensions.Logging.ILogger;         
+using Serilog.Extensions.Logging;
+using FileAnalyzer_.Reader;
+using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace FileAnalyzer_
 {
@@ -16,7 +16,6 @@ namespace FileAnalyzer_
         [STAThread]
         static void Main(string[] args)
         {
-            //ILogger kurulumu
             var logsDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs");
             Directory.CreateDirectory(logsDir);
 
@@ -31,13 +30,13 @@ namespace FileAnalyzer_
 
             var loggerFactory = LoggerFactory.Create(b => b.AddSerilog(dispose: true));
             ILogger logger = loggerFactory.CreateLogger<Program>();
-       
+
 
             //Dosya Türü Seçimi ve Çıktı
             try
             {
                 logger.LogInformation("-----HOŞGELDİNİZ-----");
-                
+
                 var chosenExt = AskFileType(logger);
                 if (chosenExt == null)
                 {
@@ -45,10 +44,10 @@ namespace FileAnalyzer_
                     return;
                 }
 
-                
+
                 var filter = BuildFilter(chosenExt);
 
-               
+
                 string selectedPath = null;
                 using (var dlg = new OpenFileDialog
                 {
@@ -66,10 +65,10 @@ namespace FileAnalyzer_
                         Console.WriteLine("Dosya seçilmedi. Program sonlandırılıyor.");
                         return;
                     }
-                    selectedPath = dlg.FileName;         
+                    selectedPath = dlg.FileName;
                 }
 
-             
+
                 IFileReader reader = FileReaderFactory.Create(selectedPath, loggerFactory);
                 string content = reader.ReadContent(selectedPath) ?? string.Empty;
 
@@ -83,7 +82,7 @@ namespace FileAnalyzer_
                     Console.WriteLine($"{w.Word}: {w.Count}");
 
                 Console.WriteLine("\nNoktalama İşaretleri:");
-                foreach (var kvp in res.PunctuationCounts) 
+                foreach (var kvp in res.PunctuationCounts)
                     Console.WriteLine($"{kvp.Key}: {kvp.Value}");
 
                 logger.LogInformation("Analiz tamamlandı. Dosya: {File}", selectedPath);
@@ -101,8 +100,7 @@ namespace FileAnalyzer_
             }
         }
 
-     
-        //Dosya Türü Sorma Fonksiyonu
+
         private static string AskFileType(ILogger logger)
         {
             while (true)
@@ -121,7 +119,7 @@ namespace FileAnalyzer_
                 }
             }
         }
-        //Dosya Filtresini oluşturan fonksiyon
+
         private static string BuildFilter(string ext)
         {
             if (string.IsNullOrWhiteSpace(ext)) return "All Files (*.*)|*.*";

@@ -8,7 +8,6 @@ namespace FileAnalyzer_.Reader
 
     public class TxtFileReader : IFileReader
     {
-        // Txt dosyalarını okuyan sınıf
         private readonly ILogger<TxtFileReader> _logger;
 
         public TxtFileReader(ILogger<TxtFileReader> logger)
@@ -20,7 +19,6 @@ namespace FileAnalyzer_.Reader
         {
             try
             {
-         
                 string content = File.ReadAllText(filePath, Encoding.UTF8);
                 _logger.LogInformation("TXT okundu: {File}", filePath);
                 return content;
@@ -28,7 +26,7 @@ namespace FileAnalyzer_.Reader
             catch (Exception ex)
             {
                 _logger.LogError(ex, "TXT okunamadı: {File}", filePath);
-                throw; 
+                throw;
             }
         }
     }

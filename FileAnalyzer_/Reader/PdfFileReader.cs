@@ -1,13 +1,10 @@
 ﻿using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using UglyToad.PdfPig;
 
 namespace FileAnalyzer_.Reader
-{//Pdf dosyalarını okuyan sınıf
+{
     public class PdfFileReader : IFileReader
     {
         private readonly ILogger<PdfFileReader> _logger;
