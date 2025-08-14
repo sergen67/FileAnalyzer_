@@ -4,7 +4,6 @@ Konsol uygulaması: dosya seç -> içerik oku -> kelime & noktalama analizi -> s
 
 ## Özellikler
 - TXT (UTF-8, TR fallback), DOCX (DocX), PDF (PdfPig)
-- Stopword filtreleme (TR/EN basit set)
 - Noktalama İşareti sayımı
 - Serilog + ILogger ile `Logs/` klasörüne günlük `.txt` log
 
