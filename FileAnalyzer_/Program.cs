@@ -2,12 +2,12 @@
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-
 using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Extensions.Logging;
 using FileAnalyzer_.Reader;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
+
 
 namespace FileAnalyzer_
 {

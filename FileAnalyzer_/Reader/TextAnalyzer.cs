@@ -34,9 +34,12 @@ namespace FileAnalyzer_.Reader
                 var w = m.Value;
                 if (!StopWords.Contains(w)) words.Add(w);
             }
+          
 
+            int MinFreq = 2;
             var freqList = words
                 .GroupBy(w => w)
+                .Where(g => g.Count() >= MinFreq)
                 .Select(g => new WordCount(g.Key, g.Count()))
                 .OrderByDescending(x => x.Count)
                 .ThenBy(x => x.Word)
