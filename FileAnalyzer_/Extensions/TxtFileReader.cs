@@ -3,7 +3,7 @@ using System.IO;
 using System.Text;
 using Microsoft.Extensions.Logging;
 
-namespace FileAnalyzer_.Reader
+namespace FileAnalyzer_.Extensions
 {
 
     public class TxtFileReader : IFileReader

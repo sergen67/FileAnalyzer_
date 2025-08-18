@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using FileAnalyzer_.Models;
 
 
-namespace FileAnalyzer_.Reader
+namespace FileAnalyzer_.Extensions
 {
     public static class TextAnalyzer
     {

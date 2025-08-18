@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xceed.Words.NET;
 
-namespace FileAnalyzer_.Reader
+namespace FileAnalyzer_.Extensions
 {
     public class DocxFileReader: IFileReader
     {

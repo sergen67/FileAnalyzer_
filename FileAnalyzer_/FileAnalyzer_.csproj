@@ -163,11 +163,11 @@
     <Compile Include="Models\WordCount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reader\DocxFileReader.cs" />
-    <Compile Include="Reader\FileReaderFactory.cs" />
-    <Compile Include="Reader\PdfFileReader.cs" />
-    <Compile Include="Reader\TextAnalyzer.cs" />
-    <Compile Include="Reader\TxtFileReader.cs" />
+    <Compile Include="Extensions\DocxFileReader.cs" />
+    <Compile Include="Extensions\FileReaderFactory.cs" />
+    <Compile Include="Extensions\PdfFileReader.cs" />
+    <Compile Include="Extensions\TextAnalyzer.cs" />
+    <Compile Include="Extensions\TxtFileReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

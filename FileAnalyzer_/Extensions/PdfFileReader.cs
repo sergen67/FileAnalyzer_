@@ -3,7 +3,7 @@ using System;
 using System.Text;
 using UglyToad.PdfPig;
 
-namespace FileAnalyzer_.Reader
+namespace FileAnalyzer_.Extensions
 {
     public class PdfFileReader : IFileReader
     {

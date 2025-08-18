@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Extensions.Logging;
-using FileAnalyzer_.Reader;
+using FileAnalyzer_.Extensions;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 

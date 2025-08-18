@@ -2,7 +2,7 @@
 using System;
 using System.IO;
 
-namespace FileAnalyzer_.Reader
+namespace FileAnalyzer_.Extensions
 {
     public class FileReaderFactory
     {
